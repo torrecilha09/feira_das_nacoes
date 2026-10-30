@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo HTML, CSS e DOM</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F1F5F9;
+            color: #1E293B;
+        }
+
+        header {
+            background-color: #142D4E;
+            color: #FFFFFF;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #1E496B;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #E8C77B;
+        }
+
+        main {
+            background-color: #FFFFFF;
+            padding: 30px;
+            min-height: 200px;
+            max-width: 1000px;
+            margin: 25px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1E496B;
+            border-bottom: 2px solid #D6B56D;
+            padding-bottom: 8px;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #475569;
+        }
+
+        ol {
+            background-color: #F1F5F9;
+            padding: 20px 20px 20px 45px;
+            border-radius: 8px;
+            line-height: 2;
+        }
+
+        li {
+            color: #1E496B;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #142D4E;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .bloco-footer {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        #bloco1 {
+            background-color: #DCEAF2;
+        }
+
+        #bloco2 {
+            background-color: #DDECE4;
+        }
+
+        #bloco3 {
+            background-color: #F5EBD5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main id="conteudo">
+        <!-- O JavaScript criará os elementos aqui -->
+    </main>
+
+    <script>
+        // Selecionar o elemento main
+        const main = document.getElementById("conteudo");
+
+        // CRIAR UM TÍTULO
+        const titulo = document.createElement("h2");
+        titulo.textContent = "Feira das Nações";
+        main.appendChild(titulo);
+
+        // CRIAR UM PARÁGRAFO
+        const paragrafo = document.createElement("p");
+        paragrafo.textContent = "Top salas que mais estavam legais.";
+        main.appendChild(paragrafo);
+
+        // CRIAR UMA LISTA ORDENADA
+        const lista = document.createElement("ol");
+
+        // Primeiro item
+        const item1 = document.createElement("li");
+        item1.textContent = "Japão";
+        lista.appendChild(item1);
+
+        // Segundo item
+        const item2 = document.createElement("li");
+        item2.textContent = "Itália";
+        lista.appendChild(item2);
+
+        // Terceiro item
+        const item3 = document.createElement("li");
+        item3.textContent = "Síria/Líbano";
+        lista.appendChild(item3);
+
+        const item4 = document.createElement("li");
+        item4.textContent = "Alemanha";
+        lista.appendChild(item4);
+
+        // Adicionar a lista ao main
+        main.appendChild(lista);
+
+        const paragrafo1 = document.createElement("p");
+        paragrafo1.textContent = "Por mais que muitas salas estivessem legais, essas foram as que mais chamaram atenção, pelo simples fato de interagirem com o público, por exmplo a sala da Síria e do Líbano teve uma apresentação musical";
+        main.appendChild(paragrafo1);
+
+        const titulo2 = document.createElement("h2");
+        titulo2.textContent = "Sala que merece reconhecimento";
+        main.appendChild(titulo2);
+
+        const paragrafo2 = document.createElement("p");
+        paragrafo2.textContent = "A Angola merece reconhecimento pelo fato de terem várias atratividades, teve uma pequena explicação sobre algumas artes em argila, lutas, música e até cobras vivas para exposição.";
+        main.appendChild(paragrafo2);
+
+        const paragrafo3 = document.createElement("p");
+        paragrafo3.textContent = "Eu por exemplo pude ter a incrivel experiencia de fazer 'carinho' em uma cobra. Fazia muito tempo que não tinha uma experiencia tão absurda quanto essa.";
+        main.appendChild(paragrafo3);
+
+        const img = document.createElement('img');
+        img.src = 'https://cdn.awsli.com.br/2500x2500/2531/2531871/produto/234362433/whatsapp-image-2023-09-22-at-13-38-23-pigxakx4xh.jpeg';
+        img.alt = 'Alguns dos países';
+
+        // Adicionar imagem ao site
+        main.appendChild(img);
+
+    </script>
+
+</body>
+</html>
